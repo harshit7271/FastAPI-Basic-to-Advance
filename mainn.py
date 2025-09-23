@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field, computed_field
 from typing import Annotated, Literal
 
 app = FastAPI()
-
+# post
 class Patient(BaseModel):
     
     id: Annotated[str, Field(..., description= 'ID of the Patient', examples=['P001'])]
@@ -76,6 +76,7 @@ def sort_patients(sort_by: str = Query(..., description='Sort on the basis of he
     
     return sorted_data
  
+
 
 
 
